@@ -1,0 +1,7 @@
+__pycache__/
+.venv/
+runs/
+data/
+figures/*.npz
+figures/*.png
+figures/*.pdf

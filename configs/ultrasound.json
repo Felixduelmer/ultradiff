@@ -1,0 +1,24 @@
+{
+  "rendering": {
+    "itx_eps": 1e-05,
+    "ray_eps": 0.001,
+    "sdf_mode": "cubic",
+    "resolution": 96,
+    "spp": 64,
+    "bounces": 1
+  },
+  "transducer": {
+    "td_width": 0.65,
+    "td_height": 0.025,
+    "max_distance": 0.85,
+    "psf_sigma_lateral": 2.0,
+    "psf_sigma_axial": 2.0
+  },
+  "optimization": {
+    "steps": 180,
+    "grid_resolution": 40,
+    "initial_radius": 0.15,
+    "learning_rate": 0.001,
+    "laplacian_weight": 0.001
+  }
+}

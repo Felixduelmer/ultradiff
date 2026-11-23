@@ -1,0 +1,24 @@
+[project]
+name = "ultradiff"
+version = "0.1.0"
+description = "Differentiable ultrasound ray tracing for shape optimization"
+requires-python = ">=3.10"
+dependencies = [
+    "drjit==1.2.0",
+    "matplotlib==3.10.0",
+    "mitsuba==3.7.1",
+    "numpy==2.2.6",
+    "scikit-image==0.25.0",
+    "scipy",
+    "trimesh==4.6.3",
+]
+
+[project.optional-dependencies]
+phantom = ["fastsweep"]
+
+[tool.uv.sources]
+fastsweep = { git = "https://github.com/rgl-epfl/fastsweep.git", rev = "efc9fc5c4298310adf4ca8649e0d62f29dc5b6a7" }
+
+# Dr.Jit's published Linux wheel uses the legacy libstdc++ ABI.
+[tool.uv.config-settings-package.fastsweep]
+"cmake.define.CMAKE_CXX_FLAGS" = "-D_GLIBCXX_USE_CXX11_ABI=0"

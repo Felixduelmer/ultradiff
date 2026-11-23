@@ -1,0 +1,43 @@
+{
+  "rendering": {
+    "itx_eps": 1e-05,
+    "ray_eps": 0.001,
+    "sdf_mode": "cubic",
+    "resolution": [
+      372,
+      658
+    ],
+    "spp": 128,
+    "bounces": 1
+  },
+  "transducer": {
+    "td_width": 0.513,
+    "td_height": 0.01,
+    "max_distance": 0.9,
+    "psf_sigma_lateral": 2.0,
+    "psf_sigma_axial": 2.0
+  },
+  "optimization": {
+    "steps": 3500,
+    "grid_resolution": 64,
+    "initial_radius": 0.25,
+    "learning_rate": 0.001,
+    "laplacian_weight": 0.001,
+    "initial_center": [
+      0.5,
+      0.5,
+      0.3
+    ],
+    "batch_size": 16,
+    "redistance_every": 100,
+    "upsample_steps": [
+      1000,
+      2000,
+      3000
+    ],
+    "learning_rate_factor": 0.25
+  },
+  "acquisition": {
+    "retained_depth_fraction": 1.0
+  }
+}

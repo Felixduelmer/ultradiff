@@ -1,0 +1,14 @@
+{
+  "rendering": {
+    "itx_eps": 1e-05,
+    "ray_eps": 0.001,
+    "sdf_mode": "cubic"
+  },
+  "transducer": {
+    "td_width": 0.513,
+    "td_height": 0.02,
+    "max_distance": 0.6,
+    "psf_sigma_lateral": 2.0,
+    "psf_sigma_axial": 2.0
+  }
+}
