@@ -31,10 +31,10 @@ Use `--mesh path/to/model.stl --out runs/my-mesh` for another STL. Choose a fres
 
 ## Optional real-data reconstruction
 
-Supply the real phantom acquisition separately in a directory containing `images_train.npy`, `poses_train.npy`, and `td_setting.json`. The phantom extra builds fastsweep and requires a C++ compiler, CMake, and a CUDA toolkit.
+Download `spine_phantom.zip` from the [spine phantom data release](https://github.com/Felixduelmer/ultradiff/releases/tag/spine-phantom-v1) and extract it in the repository root. The phantom extra builds fastsweep and requires a C++ compiler, CMake, and a CUDA toolkit.
 
 ```sh
-uv run --extra phantom python optimize.py --acquisition /path/to/spine_phantom \
+uv run --extra phantom python optimize.py --acquisition ./spine_phantom \
   --config configs/phantom.json --out runs/phantom-replay
 ```
 
